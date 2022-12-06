@@ -5,9 +5,11 @@ from django.http import JsonResponse
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
 from django.views.generic import ListView, DetailView, UpdateView, CreateView, DeleteView
+from rest_framework.generics import CreateAPIView
+from rest_framework.viewsets import ModelViewSet
 
 from hunting.settings import TOTAL_ON_PAGE
-from users.models import User, Location
+from users.serializers import *
 
 
 class UserListView(ListView):
@@ -83,8 +85,8 @@ class UserUpdateView(UpdateView):
                              }, safe=False)
 
 
-@method_decorator(csrf_exempt, name='dispatch')
-class UserCreateView(CreateView):
+
+'''class UserCreateView(CreateView):
     model = User
     fields = ['username']
 
@@ -110,7 +112,14 @@ class UserCreateView(CreateView):
                              'role': user.role,
                              'age': user.age,
                              'locations': list(map(str, user.location.all()))
-                             }, safe=False)
+                             }, safe=False)'''
+
+@method_decorator(csrf_exempt, name='dispatch')
+class UserCreateView(CreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserCreateSerializer
+
+
 
 
 @method_decorator(csrf_exempt, name='dispatch')
@@ -121,3 +130,7 @@ class UserDeleteView(DeleteView):
     def delete(self, request, *args, **kwargs):
         super().delete(request, *args, **kwargs)
         return JsonResponse({'status': 'ok'}, status=204)
+
+class LocationViewSet(ModelViewSet):
+    queryset = Location.objects.all()
+    serializer_class = LocationSerialiser
