@@ -33,16 +33,30 @@
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="edccab3e-2010-49b6-b100-e4a2257624d8" object-ref="schemas/public/tables/auth_group" />
+      <object connection-id="edccab3e-2010-49b6-b100-e4a2257624d8" object-ref="schemas/public/tables/ads_category" />
+      <object connection-id="edccab3e-2010-49b6-b100-e4a2257624d8" object-ref="schemas/public/tables/users_user" />
+      <object connection-id="edccab3e-2010-49b6-b100-e4a2257624d8" object-ref="schemas/public/tables/users_user_user_permissions" />
+      <object connection-id="edccab3e-2010-49b6-b100-e4a2257624d8" object-ref="schemas/public/tables/users_user_groups" />
+      <object connection-id="edccab3e-2010-49b6-b100-e4a2257624d8" object-ref="schemas/public/tables/users_user_location" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="edccab3e-2010-49b6-b100-e4a2257624d8" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="edccab3e-2010-49b6-b100-e4a2257624d8" dataset="public.auth_group" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="edccab3e-2010-49b6-b100-e4a2257624d8" dataset="public.ads_category" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="edccab3e-2010-49b6-b100-e4a2257624d8" dataset="public.users_location" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="edccab3e-2010-49b6-b100-e4a2257624d8" dataset="public.users_user_user_permissions" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="edccab3e-2010-49b6-b100-e4a2257624d8" dataset="public.users_user_groups" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="edccab3e-2010-49b6-b100-e4a2257624d8" dataset="public.django_content_type" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="edccab3e-2010-49b6-b100-e4a2257624d8" dataset="public.auth_user" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="edccab3e-2010-49b6-b100-e4a2257624d8" dataset="public.users_user" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="edccab3e-2010-49b6-b100-e4a2257624d8" dataset="public.users_user_location" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="edccab3e-2010-49b6-b100-e4a2257624d8" dataset="public.ads_ad" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="edccab3e-2010-49b6-b100-e4a2257624d8" dataset="public.django_migrations" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />

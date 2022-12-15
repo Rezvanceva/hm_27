@@ -21,12 +21,14 @@ from rest_framework import routers
 
 from ads.views.ad import root, AdViewSet
 from ads.views.category import *
+from ads.views.selection import SelectionViewSet
 from hunting import settings
 from users.views import LocationViewSet
 
 router = routers.SimpleRouter()
 router.register('location', LocationViewSet)
 router.register('ad', AdViewSet)
+router.register('selection', SelectionViewSet)
 
 urlpatterns = [
     path('', root),
@@ -34,7 +36,6 @@ urlpatterns = [
     path('ad/', include('ads.urls.ad')),
     path('user/', include('users.urls')),
     path('cat/', include('ads.urls.category'))
-
 ]
 
 urlpatterns += router.urls
